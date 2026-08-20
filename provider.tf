@@ -10,7 +10,7 @@ terraform {
     resource_group_name  = "dev-rg1100"
     storage_account_name = "devst1100"
     container_name       = "tfstate"
-    key                  = "terraform.tfstate"
+    key                  = "terraform2.tfstate"
   }
 }
 
