@@ -11,4 +11,8 @@ rgvars = {
     name     = "prov-rg1400"
     location = "west us"
   }
+     rg4 = {
+    name     = "prov-rg1500"
+    location = "west us"
+  }
 }
