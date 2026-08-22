@@ -19,5 +19,6 @@ rgvars = {
       rg5 = {
     name     = "prod-rg1600"
     location = "west us"
+
   }
 }
