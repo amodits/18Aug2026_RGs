@@ -21,4 +21,11 @@ rgvars = {
 
 
   }
+
+      rg7 = {
+    name     = "approve-rg1600"
+    location = "west us"
+
+
+  }
 }
