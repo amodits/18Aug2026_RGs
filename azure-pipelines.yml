@@ -1,0 +1,27 @@
+trigger:
+  branches:
+    include:
+      - feature/*   # Run pipeline only on feature branches
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+steps:
+- task: UseTerraform@0
+  inputs:
+    terraformVersion: '1.6.0'   # pick your version
+
+- script: terraform init
+  displayName: 'Terraform Init'
+
+- script: terraform validate
+  displayName: 'Terraform Validate'
+
+- script: terraform plan -out=tfplan.out
+  displayName: 'Terraform Plan'
+
+- task: PublishBuildArtifacts@1
+  inputs:
+    PathtoPublish: 'tfplan.out'
+    ArtifactName: 'terraform-plan'
+    publishLocation: 'Container'
